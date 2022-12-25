@@ -1,6 +1,6 @@
-const Home = () => {
+function Home () {
     return(
-        <div>
+        <div className="homepage container">
             <div>HERO IMAGE</div>
             <div>Weekly sale - call to action</div>
             <div>Cards</div>

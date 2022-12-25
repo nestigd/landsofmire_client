@@ -3,7 +3,7 @@ import HomepageCard from "../components/HomepageCard";
 function  CardContainer (){
 
     return(
-        <div className="card-container">
+        <div className="card-container margin-l">
             <HomepageCard
                 title= "Iron sword"
                 fullPrice = {12}

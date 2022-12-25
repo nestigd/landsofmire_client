@@ -23,6 +23,13 @@ section{
   margin-left: 8.8rem;
   margin-right: 8.8rem;
 }
+
+.container-m{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100rem;
+}
+
 .section-title{
   display: flex;
   flex-direction: column;
@@ -39,8 +46,10 @@ section{
 .section-title h1{
   color: var(--light-black);
   font-size: 4.8rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.2rem;
 }
+
+/* HELPERS */
 
 .margin-xs{
   margin-bottom: 0.8rem;
@@ -60,4 +69,10 @@ section{
 
 .margin-xl{
   margin-bottom: 4rem;
+}
+
+.flex-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

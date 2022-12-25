@@ -6,12 +6,9 @@ function PlayNowBtn(){
     const loggedIn = true
 
     return(
-   
     <Link to={loggedIn ? "/game" : "/auth"} className="main-button">
         {loggedIn ? "Play Now" : "Sign up or Log in"}
     </Link>
-
-)
-}
+    )}
 
 export default PlayNowBtn

@@ -151,7 +151,9 @@
 
 .main-button, .main-button:link, .main-button:visited
 {
-  display: block;
+  width: fit-content;
+  text-align: center;
+  display: inline-block;
   text-decoration: none;
   color: #ddd;
   border: none;
@@ -260,4 +262,13 @@
   text-align: center;
   color: var(--light-black);
   font-size: 1.6rem;
+}
+
+/**** FOOTER ****/
+
+footer{
+  color: var(--light-gray);
+  display: flex;
+  gap: 4.2rem;
+  margin-bottom: 4.2rem;
 }

@@ -2,6 +2,7 @@ import Wish from "../icons/icon-wish.png"
 import Selection from "../icons/icon-select.png"
 import Money from "../icons/money-bag.png"
 import Crown from "../icons/crown.png"
+import PlayNowBtn from "./PlayNowBtn"
 
 function AboutGrid () {
     return(
@@ -10,11 +11,15 @@ function AboutGrid () {
                     <h2 className="about-grid-d2" > Choose your playstyle </h2>
                     <h2 className="about-grid-d3"> Trade with playes and NPCs</h2>
                     <h2 className="about-grid-d4"> Become famous </h2>
-
+    
                     <img src={Wish} alt="splarkling stars" className="about-grid-img1" />
                     <img src={Selection} alt="crossroad selection" className="about-grid-img2" />
                     <img src={Money} alt="money bag" className="about-grid-img3" />
                     <img src={Crown} alt="crown" className="about-grid-img4" />
+
+                    <div className="about-grid-btn">
+                        <PlayNowBtn />
+                    </div>
                 </div>
     );
 };

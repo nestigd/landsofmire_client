@@ -31,9 +31,7 @@ function Navbar () {
             <Link className="nav-link nav-btn--login" to="/auth">
                 <span >Log in</span>
             </Link>
-            </div>
-            
-            
+            </div>          
            
         </div>
     )

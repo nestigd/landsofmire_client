@@ -2,6 +2,7 @@
 import AboutGrid from "../components/AboutGrid";
 import Hero from "../components/Hero";
 import SectionTitle from "../components/SectionTitle";
+import CardContainer from "../components/CardContainer";
 
 
 
@@ -15,9 +16,19 @@ function Home () {
 
             <section className="about-section container">
                 <SectionTitle 
+                    subheading="THE GAME"
                     heading="Start your adventure today:" 
-                    subheading="THE GAME"/>
+                />
                 <AboutGrid/>
+                
+            </section>
+                <SectionTitle 
+                    subheading="ON SALE"
+                    heading="Become stronger and save your gold!" 
+                />
+                <CardContainer/>
+            <section>
+
             </section>
 
 

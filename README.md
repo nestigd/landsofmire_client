@@ -1,4 +1,24 @@
-# Getting Started with Create React App
+# Lands of Mire
+
+Lands of Mire is a game that doesn't exist yet. 
+The project will grow in scope as I improve as a programmer, allowing me to play around with newly acquired skills. 
+
+## IDEAS:
+
+### Website - Homepage
+
+- Mostly static page containing links to the shop (maybe cards) and the game.
+- 8-bit graphic themed. (reasons: keep a coherent theme, graphic assets are easily created/found)
+ 
+### Shop:
+
+- TODO
+
+### Game:
+- TODO
+
+
+# CREATE-REACT-APP
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

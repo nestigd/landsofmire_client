@@ -1,0 +1,136 @@
+/**** COLORS ****/
+
+
+
+
+/**** NAVBAR ****/
+
+.navbar{
+  flex-wrap: wrap;
+  background-color: var(--mid-black);
+  padding: 1rem 4rem;
+  display: flex;
+  align-items:stretch;
+  justify-content: space-between;  
+}
+.nav-left{
+  font-size: 3.2rem;
+}
+.nav-center{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  font-size: 1.6rem;
+
+}
+.nav-right{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  font-size: 1.6rem;
+}
+.nav-link{
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2.4rem;
+  transition: all  0.15s;
+}
+.nav-link:hover{
+  text-decoration: double;
+}
+.nav-link:active{
+  background-color: rgb(33, 33, 33);
+}
+.nav-btn--login{
+  align-self: center;
+  padding: 1rem 3rem;
+  font-weight: 500;
+  color: black;
+  border: 1px solid rgb(91, 91, 91);
+  border-radius: 24px;
+  background-color: aliceblue;
+}
+
+/**** HERO SECTION ****/
+
+.hero-section{
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section::after{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  content: "";
+  height: 100vh;
+  width: 100% ;
+  background: linear-gradient( #b9835a8b, #230e064b,#03071699, #030716e9);
+}
+.hero-text{
+  color: var(--very-light-white);
+  z-index: 1;
+  text-align: center;
+}
+.hero-section h1{
+  font-size: 5.6rem;
+}
+.hero-section h3{
+  font-size: 2.4rem;
+}
+
+/**** ABOUT SECTION ****/
+
+.about-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.about-section h2{
+  font-size: 2.4rem;
+}
+
+.about-grid{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 3.2rem;
+  column-gap: 2.4rem;
+  justify-items: start;
+  align-items: center;
+}
+
+.about-grid-img1{
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: end;
+}
+.about-grid-img2{
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: end;
+
+}
+.about-grid-img3{
+  grid-column: 1;
+  grid-row: 3;  
+  justify-self: end;
+
+}
+.about-grid-img4{
+  grid-column: 1;
+  grid-row: 4;
+  justify-self: end;
+
+}

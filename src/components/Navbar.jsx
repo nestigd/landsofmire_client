@@ -12,22 +12,23 @@ function Navbar () {
             </div>
 
             <div className="nav-center">
-                <Link className="nav-link" to="#">
+                <Link className="nav-link" to="/game">
                     <span >Game</span>
                 </Link>
-                <Link className="nav-link" to="#">
-                    <span >Lore</span>
-                </Link>
-                <Link className="nav-link" to="#">
+                <Link className="nav-link" to="/store">
                     <span >Store</span>
                 </Link>
+                <Link className="nav-link" to="/lore">
+                    <span >Lore</span>
+                </Link>
+                
             </div>
 
             <div className="nav-right">
-            <Link className="nav-link nav-btn" to="#">
+            <Link className="nav-link nav-btn" to="/auth">
                 <span >Sign up</span>
             </Link>
-            <Link className="nav-link nav-btn--login" to="/shop">
+            <Link className="nav-link nav-btn--login" to="/auth">
                 <span >Log in</span>
             </Link>
             </div>

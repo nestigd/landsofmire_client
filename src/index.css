@@ -23,7 +23,7 @@ body {
 .navbar{
   flex-wrap: wrap;
   background-color: black;
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
   display: flex;
   align-items:stretch;
   justify-content: space-between;  
@@ -67,6 +67,8 @@ body {
 }
 
 .nav-btn--login{
+  align-self: center;
+  padding: 1rem 3rem;
   font-weight: 500;
   color: black;
   border: 1px solid rgb(91, 91, 91);

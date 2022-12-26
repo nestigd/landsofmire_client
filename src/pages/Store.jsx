@@ -1,6 +1,8 @@
 function Store (){
     return(
-        <h1>Store</h1>
+        <div className="store">
+            <div className="store-widget"></div>
+        </div>
     )
 }
 

@@ -1,3 +1,17 @@
+/*COLOR SYSTEM*/
+
+* {
+  --very-light-white: #eee;
+  --black: rgb(18, 18, 18);
+  --mid-black: #333;
+  --light-black: #3e3e3e;
+  --gray: #555;
+  --light-gray: #888;
+  --main-color: #ea5951;
+  --main-color-dark: #c24741;
+}
+
+/* RESET */
 *{
   box-sizing: border-box;
   margin: 0;
@@ -15,10 +29,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-  
-section{
-  margin-bottom: 10.4rem;
-}
+
+/*CONTAINERS*/
 .container{
   margin-left: 8.8rem;
   margin-right: 8.8rem;
@@ -49,7 +61,11 @@ section{
   margin-bottom: 3.2rem;
 }
 
-/* HELPERS */
+/* MARGIN */
+
+section{
+  margin-bottom: 10.4rem;
+}
 
 .margin-xs{
   margin-bottom: 0.8rem;
@@ -71,8 +87,95 @@ section{
   margin-bottom: 4rem;
 }
 
+/* OTHER HELPER CLASSES */
+
 .flex-center{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+
+/***** COMPONENTS *****/
+
+/* NAVBAR */
+
+.navbar {
+  flex-wrap: wrap;
+  background-color: var(--mid-black);
+  padding: 1rem 4rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.nav-left {
+  font-size: 3.2rem;
+}
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  font-size: 1.6rem;
+}
+.nav-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  font-size: 1.6rem;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2.4rem;
+  transition: all 0.15s;
+}
+.nav-link:hover {
+  text-decoration: double;
+}
+.nav-link:active {
+  background-color: rgb(33, 33, 33);
+}
+.nav-btn--login {
+  align-self: center;
+  padding: 1rem 3rem;
+  font-weight: 500;
+  color: black;
+  border: 1px solid rgb(91, 91, 91);
+  border-radius: 24px;
+  background-color: aliceblue;
+}
+
+
+/* MAIN BUTTON */
+
+.main-button,
+.main-button:link,
+.main-button:visited {
+  width: fit-content;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: #ddd;
+  border: none;
+  border-radius: 24px;
+  padding: 0.8rem 3.2rem;
+  font-weight: 600;
+  font-size: 2.4rem;
+  background-color: var(--main-color);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.main-button:hover {
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+  transform: translate(0px, -3px);
+}
+
+.main-button:active {
+  background-color: var(--main-color-dark);
+}
+
+/* SECONDARY BUTTON */

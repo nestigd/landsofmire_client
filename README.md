@@ -1,6 +1,6 @@
 # Lands of Mire
 
-Lands of Mire is a web app consisting in a homepage, a game and a store. I'm using this project to practice ReactJS
+Lands of Mire is a web app consisting in a homepage, a game and a store. I'm using this project to practice ReactJS and the MERN stack in general
 
 
 # CREATE-REACT-APP

@@ -43,7 +43,7 @@
 }
 
 .store-sidebar--form{
-    accent-color: var(--main-color-light);
+    accent-color: var(--main-color-very-light);
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
@@ -74,9 +74,6 @@
 .store-sidebar .store-radio{
     display: flex;
     justify-content: space-around;
-}
-
-#filterPrice{
 }
 
 .store-main{

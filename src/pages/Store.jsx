@@ -7,7 +7,6 @@ function Store (){
         <div className="store">
             <p className="margin-s"></p>
             <StoreWidget/>
-
         </div>
     )
 }

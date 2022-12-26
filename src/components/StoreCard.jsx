@@ -3,14 +3,15 @@ function StoreCard(props) {
     const {title, categories, price,rarity,img} = props;
 
     return(
-        <div className="store-card flex-center">
+        <div className="store-card flex-column">
             <img src={img} alt={title}/>
-            <h2>{title}</h2>
-            <div>
+            <div className="store-title">
+                <span>{title}</span><span className="rarity">{rarity}</span>
+            </div>
+            <div className="store-category-container">
                 {categories.map(category =>(<span className="store-category">{category}</span>))}
             </div>
-            <span className="rarity">Class: {rarity}</span>
-            <span className="store-price">Buy {price}</span>
+            <span className="store-price secondary-button">Buy {price}$</span>
         </div>
     )
 }

@@ -78,9 +78,75 @@
 
 .store-main{
     width: 100%;
-    overflow: hidden;
+    overflow-y: auto;
     background-color: #fef2f2;
     border-radius: 0 32px 32px 0;
     padding: 1.6rem;
+}
+
+.store-card-container{
+    gap: 2.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.store-card{
+    text-align: left;
+    width: 100%;
+    border-radius: 16px;
+    padding: 1.6rem 2.4rem;
+    box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.store-card img{
+    align-self: center;
+}
+
+
+
+.store-category-container{
+    display: flex;
+    gap: 0.8rem;
+}
+
+.store-category{
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    background-color: rgb(186, 185, 185);
+    border-radius: 20px;
+}
+
+.store-title span{
+    display: inline-block;
+}
+
+.store-title{
+    display: flex;
+    font-weight: 700;
+    display: inline-block;
+    justify-self: center;
+    gap: 2.4rem;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 0;
+}
+
+.store-card .rarity{
+   
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    color: var(--main-color-very-light);
+    background-color: var(--main-color);
+}
+
+.store-price{
+    display: inline-block;
+    align-self: center;
+    justify-self: center;
 }
 

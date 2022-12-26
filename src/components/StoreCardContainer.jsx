@@ -38,7 +38,7 @@ function StoreCardContainer() {
 
     return(
         <div className="store-card-container">
-            <StoreCard {...cards[1]}/>
+            {cards.map(card=><StoreCard {...card}/>)}
         </div>
     )
 }

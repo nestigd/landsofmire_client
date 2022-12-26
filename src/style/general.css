@@ -7,8 +7,12 @@
   --light-black: #3e3e3e;
   --gray: #555;
   --light-gray: #888;
-  --main-color: #ea5951;
   --main-color-dark: #c24741;
+  --main-color-mid: #dfb6b4;
+  --main-color: #ea5951;
+  --main-color-light: #ffd6cb;
+  --main-color-very-light: #ffe8e1;
+
 }
 
 /* RESET */
@@ -31,7 +35,14 @@ body {
 }
 
 /*CONTAINERS*/
-.container{
+
+.container-xl{
+  margin-left: 3.2rem;
+  margin-right: 3.2rem;
+
+}
+
+.container-l{
   margin-left: 8.8rem;
   margin-right: 8.8rem;
 }
@@ -87,12 +98,24 @@ section{
   margin-bottom: 4rem;
 }
 
+.marginr-xs{
+  margin-right: 0.8rem;
+}
+
 /* OTHER HELPER CLASSES */
 
 .flex-center{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: fit-content;
+  align-items: flex-start;
 }
 
 

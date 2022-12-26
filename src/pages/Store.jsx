@@ -1,7 +1,13 @@
+import SectionTitle from "../components/SectionTitle"
+import StoreWidget from "../components/StoreWidget"
+
+
 function Store (){
     return(
         <div className="store">
-            <div className="store-widget"></div>
+            <p className="margin-s"></p>
+            <StoreWidget/>
+
         </div>
     )
 }

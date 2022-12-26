@@ -30,7 +30,7 @@ function Home() {
         <Hero />
       </section>
 
-      <section className="about-section container">
+      <section className="about-section container-l">
         <SectionTitle
           subheading="THE GAME"
           heading="Start your adventure today:"

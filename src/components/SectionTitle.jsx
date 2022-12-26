@@ -3,7 +3,7 @@ function SectionTitle(props){
 
     return(
         <div className="section-title">
-            <span>{subheading}</span>
+            {subheading && <span>{subheading}</span>}
             <h1>{heading}</h1>
         </div>
     )

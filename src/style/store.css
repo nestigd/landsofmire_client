@@ -1,0 +1,89 @@
+.store{
+    padding: 3.2rem 1.6rem;
+    background: var(--very-light-white);
+}
+
+.store-title span{
+    margin-bottom: 0;
+}
+
+.store-title h1{
+    font-size: 4rem;
+    color: var(--main-color);
+}
+
+.store-widget{
+    height: 80vh;
+    background-color: var(--very-light-white);
+    border-radius: 32px;
+    box-shadow: 5px 5px 30px 5px rgba(0,0,0,0.2);
+    display: flex;
+}
+
+.store-sidebar {
+    text-align: center;
+    color: var(--main-color-very-light);
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    justify-content: center;    
+    border-radius: 32px 0 0 32px;
+    padding: 1.6rem;
+    background-color: var(--main-color);
+    max-width: 30rem;
+}
+
+.store-sidebar h2{
+    font-size: 3.2rem;
+}
+
+.store-sidebar h3{
+    font-size: 2.2rem;
+}
+
+.store-sidebar--form{
+    accent-color: var(--main-color-light);
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    justify-content: center; 
+}
+
+.store-sidebar--form input{
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--very-light-white);
+}
+
+.store-sidebar--form select:focus{
+    outline-color: var(--main-color-dark);
+
+}
+
+.store-sidebar--form input::placeholder{
+    color: var(--main-color-light);
+}
+
+.store-sidebar--form input:focus{
+    outline-color: var(--main-color-dark); 
+}
+
+.store-sidebar .store-radio{
+    display: flex;
+    justify-content: space-around;
+}
+
+#filterPrice{
+}
+
+.store-main{
+    width: 100%;
+    overflow: hidden;
+    background-color: #fef2f2;
+    border-radius: 0 32px 32px 0;
+    padding: 1.6rem;
+}
+

@@ -4,11 +4,11 @@ function StoreCard(props) {
   return (
     <div className="store-card">
       <img src={img} alt={title} />
-      <div className="store-title">
+      <span className="rarity">{rarity}</span>
+      <div className="store-title margin-xs">
         <span>{title}</span>
-        <span className="rarity">{rarity}</span>
       </div>
-      <div className="store-category-container">
+      <div className="store-category-container margin-s">
         {categories.map((category) => (
           <span className="store-category" key={category}>
             {category}

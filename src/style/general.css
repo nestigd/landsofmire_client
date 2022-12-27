@@ -102,6 +102,10 @@ section {
 
 /* OTHER HELPER CLASSES */
 
+.padding-m{
+  padding: 0 1.6rem;
+}
+
 .flex-center {
   display: flex;
   flex-direction: column;

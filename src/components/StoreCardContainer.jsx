@@ -32,6 +32,13 @@ function StoreCardContainer() {
       rarity: 10,
       img: Loading,
     },
+    {
+      title: "Iron Dagger",
+      categories: ["weapon", "melee", "stealth"],
+      price: 5,
+      rarity: 2,
+      img: Loading,
+    }
   ];
 
   return (

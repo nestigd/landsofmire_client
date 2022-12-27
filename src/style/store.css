@@ -1,4 +1,6 @@
 .store {
+--sidebar-movement : 22rem;
+
   padding: 3.2rem 1.6rem;
   background: var(--very-light-white);
 }
@@ -10,18 +12,22 @@
 .store-title h1 {
   font-size: 4rem;
   color: var(--main-color);
+  margin-bottom: 0rem;
 }
 
 .store-widget {
+  position: relative;
   height: 80vh;
-  background-color: var(--very-light-white);
+  background-color: #fef2f2;
   border-radius: 32px;
   box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.2);
   display: flex;
+  overflow: hidden;
 }
 
 .store-sidebar {
   text-align: center;
+  width: fit-content;
   color: var(--main-color-very-light);
   font-size: 1.6rem;
   display: flex;
@@ -31,7 +37,7 @@
   border-radius: 32px 0 0 32px;
   padding: 1.6rem;
   background-color: var(--main-color);
-  max-width: 30rem;
+  transition: all 0.7s;
 }
 
 .store-sidebar h2 {
@@ -51,7 +57,8 @@
 }
 
 .store-sidebar--form input {
-  font-size: 1.6rem;
+    color: var(--main-color-very-light);
+  font-size: 1.8rem;
   text-align: center;
   background-color: transparent;
   border: none;
@@ -80,66 +87,77 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  overflow-y: auto;
   background-color: #fef2f2;
   border-radius: 0 32px 32px 0;
   padding: 1.6rem;
 }
 
+.store-padding{
+    padding: 1.6rem 1.6rem;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
 .store-card-container {
-  gap: 2.4rem;
-  display: flex;
+    gap: 1.6rem;
+  display: inline-flex;
+  flex-direction: row;
+  width: fit-content;
   flex-wrap: wrap;
-  justify-items: center;
+  justify-content: flex-start;
 }
 
 .store-card{
     display: flex;
-    gap: 1.6rem;
-    flex: 0 1rem 22rem;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    position: relative;
-    text-align: left;
+    flex: 0 0 18rem;
     border-radius: 16px;
-    padding: 1.6rem 2.4rem;
+    padding: 1.6rem 1.6rem;
     box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+
 }
-
-
-
 
 .store-card img {
   align-self: center;
+  height: 5.6rem;
+  width: 5.6rem;
 }
 
 .store-category-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 0.8rem;
 }
 
 .store-category {
+    color: var(--main-color-very-light);
+    font-weight: 500;
+    letter-spacing: 0.5px;
   font-size: 1rem;
   padding: 0.4rem 0.8rem;
-  background-color: rgb(186, 185, 185);
+  background-color: var(--main-color-dark);
   border-radius: 20px;
 }
 
 .store-title span {
+    font-size: 1.6rem;
   display: inline-block;
 }
 
 .store-title {
   display: flex;
   font-weight: 700;
-  align-items: flex-start;
-
+  text-align: center;
+  justify-content: center;
   gap: 0.8rem;
   font-size: 2rem;
   color: var(--main-color);
-  margin-bottom: 0;
 }
-
 .store-card .rarity {
   font-size: 3.2rem;
   top: 1.6rem;
@@ -158,4 +176,57 @@
 .store-price {
   align-self: center;
   justify-self: flex-end;
+}
+
+
+/***** hide sidebar *****/
+
+/** button **/
+
+
+.toggle-sidebar{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top:1.6rem;
+    left: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.toggle-sidebar svg{
+    fill: var(--main-color);
+    width: 3.2rem;
+    height: 3.2rem;
+    transition: all 0.2s;
+}
+
+
+
+.store-sidebar{
+    margin-left: -22rem;
+    opacity: 0;
+}
+
+.store-main{
+    margin-left: -3.6rem;
+}
+
+.sidebaron .store-sidebar{
+    margin-left: 0;
+    opacity: 100;
+}
+
+.sidebaron .store-main{
+    margin-left: 0;
+}
+
+
+.sidebaron .toggle-sidebar svg{
+    fill: var(--main-color-very-light);
+}
+
+.toggle-sidebar:hover svg{
+    fill: var(--main-color-dark);
 }

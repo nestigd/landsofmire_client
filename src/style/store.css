@@ -86,14 +86,14 @@
 
 .store-card-container{
     gap: 2.4rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     justify-items: center;
 }
 
 .store-card{
     text-align: left;
-    width: 100%;
+    min-width: 25rem;
     border-radius: 16px;
     padding: 1.6rem 2.4rem;
     box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.1);

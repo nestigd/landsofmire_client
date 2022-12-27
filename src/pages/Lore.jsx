@@ -3,7 +3,7 @@ import SectionTitle from "../components/SectionTitle";
 function Lore() {
   return (
     <div className="container-l">
-      <p></p>
+      <p className="margin-l"></p>
       <SectionTitle
         heading="History of the Lands of Mire"
         subheading="THE LORE"
@@ -11,32 +11,29 @@ function Lore() {
       <div className="lore-body">
         <p>
           At the heart of Mire lied the great kingdom of Arantha, a sprawling
-          empire ruled by a just and fair queen. The kingdom is home to a
+          empire ruled by a just and fair queen. The kingdom was home to a
           diverse array of races, including humans, dwarves, elves, and even the
           rare and mysterious half-elves.
         </p>
-
         <p>
-          The dwarves, with their sturdy builds and mastery of craftsmanship,
-          are renowned for their skill in forging the finest weapons and armor
-          in all the land. The elves, with their natural affinity for magic, are
-          respected for their wisdom and knowledge. And the half-elves, with
-          their unique blend of both human and elven traits, are often looked to
-          as leaders and mediators.
+          The dwarves, were renowned for their skill in forging the finest
+          weapons and armor in all the land. The elves, with their natural
+          affinity for magic, were respected for their wisdom and knowledge. And
+          the half-elves, with their unique blend of both human and elven
+          traits, were often looked to as leaders and mediators.
         </p>
 
         <p>
-          But Mire is not just home to these civilized races. The wilds are
-          filled with all manner of mythical creatures. Some of these creatures
-          are benevolent, while others are deadly and dangerous.
+          But Mire was not just home to these communities. The wilds are filled
+          with all manner of mythical creatures. Some of these creatures are
+          benevolent, while others are deadly and dangerous.
         </p>
 
         <p>
-          The kingdom of Arantha was once a powerful and influential kingdom,
-          known for its wealth and prosperity. Located on the distant island of
-          Mire, the kingdom was protected by powerful storms that kept outsiders
-          at bay, allowing it to remain isolated and protected from the outside
-          world.
+          The kingdom of Arantha was oncepowerful and influential, known for its
+          wealth and prosperity. Located on the distant island of Mire, the
+          kingdom was protected by powerful storms that kept outsiders at bay,
+          allowing it to remain isolated and protected from the outside world.
         </p>
 
         <p>

@@ -1,4 +1,3 @@
-
 /**** HERO - SECTION ****/
 
 .hero-section {
@@ -119,7 +118,7 @@
 .homepage-card h2 {
   text-align: center;
   font-size: 1.6rem;
-  color: var(--main-color-dark);
+  color: var(--main-color);
 }
 
 .homepage-card p {
@@ -137,35 +136,6 @@
 
 .homepage-card--prices strong {
   text-decoration: line-through;
-}
-
-.homepage-card button {
-  color: var(--main-color);
-  padding: 0.4rem 0.8rem;
-  font-weight: 600;
-  letter-spacing: 1.1px;
-  font-size: 2rem;
-  border: solid 2px var(--main-color);
-  border-radius: 16px;
-  transition: all 0.3s;
-}
-
-.homepage-card button:hover {
-  border: solid 2px var(--main-color);
-  color: var(--very-light-white);
-  background-color: var(--main-color);
-}
-
-.homepage-card button:active {
-  border: solid 2px var(--main-color-dark);
-  color: var(--very-light-white);
-  background-color: var(--main-color-dark);
-}
-
-.homepage-card .countdown {
-  text-align: center;
-  color: var(--light-black);
-  font-size: 1.6rem;
 }
 
 /**** FOOTER ****/

@@ -100,10 +100,10 @@
 }
 
 .store-card-container {
-    gap: 1.6rem;
+  width: 100%;
+  gap: 1.6rem;
   display: inline-flex;
   flex-direction: row;
-  width: fit-content;
   flex-wrap: wrap;
   justify-content: flex-start;
 }

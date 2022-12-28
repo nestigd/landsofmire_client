@@ -3,7 +3,7 @@ function StoreCard(props) {
 
   return (
     <div className="store-card">
-      <img src={img} alt={title} />
+      <img src={img} alt={title} className="margin-xs"/>
       <span className="rarity">{rarity}</span>
       <div className="store-title margin-xs">
         <span>{title}</span>

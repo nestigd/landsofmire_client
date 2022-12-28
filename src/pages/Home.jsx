@@ -16,8 +16,10 @@ function Home() {
       const responseJson = await response.json();
 
       if (response.ok) {
-        setOnSale(responseJson);
         console.log(responseJson);
+        setOnSale(responseJson.items);
+      }else{
+        console.log(response.error)
       }
     };
 

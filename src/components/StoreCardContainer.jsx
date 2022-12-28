@@ -1,51 +1,39 @@
-import Loading from "../icons/loading.png";
+import { useEffect } from "react";
+import { useState } from "react";
 import StoreCard from "./StoreCard";
+import Loading from "../icons/loading.png"
 
 function StoreCardContainer() {
+
   //temporary hardcoded data
-  const cards = [
-    {
-      title: "Iron sword",
-      categories: ["weapon", "melee"],
-      price: 8,
-      rarity: 1,
-      img: Loading,
-    },
-    {
-      title: "Battle axe",
-      categories: ["weapon", "melee"],
-      price: 12,
-      rarity: 2,
-      img: Loading,
-    },
-    {
-      title: "Magic woodstick",
-      categories: ["weapon", "magic"],
-      price: 6,
-      rarity: 1,
-      img: Loading,
-    },
-    {
-      title: "Wyvern cord bow",
-      categories: ["weapon", "ranged"],
-      price: 450,
-      rarity: 10,
-      img: Loading,
-    },
-    {
-      title: "Iron Dagger",
-      categories: ["weapon", "melee", "stealth"],
-      price: 5,
-      rarity: 2,
-      img: Loading,
+  const [items, setItems] = useState(undefined);
+  
+  useEffect(() => {
+    const fetchItems = async () => {
+      const response = await fetch('api/shop/items');
+      const responseJson = await response.json();
+  
+      if (response.ok){
+        setItems(responseJson.items)
+        console.log(responseJson.items)
+      }else{
+        console.log(response.error)
+      }
     }
-  ];
+    fetchItems();
+  },[]);
 
   return (
     <div className="store-card-container">
-      {cards.map((card) => (
-        <StoreCard {...card} key={card.title} />
-      ))}
+      {
+      items ? (
+        items.map((item) => (
+        <StoreCard {...item} key={item.title} img={Loading}
+        />))
+      ) : (
+      ""
+      )
+      }
     </div>
   );
 }

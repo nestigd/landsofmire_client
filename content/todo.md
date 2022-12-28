@@ -15,6 +15,7 @@
 
 ## STORE
 
+- Implementation of sidebar filter
 - General goods store
 - Player items store (auction system?)
 

@@ -42,44 +42,44 @@ function StoreSidebar() {
         </div>
 
         <div className="flex-center">
-          <h3 className="margin-xs">Filter items</h3>
+          <h3 className="margin-xs">Filter class</h3>
           <div className="flex-column">
-            <label htmlFor="weapons">
+            <label htmlFor="weapon">
               <input
                 className="marginr-xs"
                 type="checkbox"
                 name="itemClassFilter"
-                id="weapons"
+                id="weapon"
                 defaultChecked={true}
               />
-              Weapons
+              Weapon
             </label>
-            <label htmlFor="consumables">
+            <label htmlFor="melee">
               <input
                 className="marginr-xs"
                 type="checkbox"
                 name="itemClassFilter"
-                id="consumables"
+                id="melee"
               />
-              Consumables
+              Melee
             </label>
-            <label htmlFor="companions">
+            <label htmlFor="ranged">
               <input
                 className="marginr-xs"
                 type="checkbox"
                 name="itemClassFilter"
-                id="companions"
+                id="ranged"
               />
-              Companions
+              Ranged
             </label>
-            <label htmlFor="realEstate">
+            <label htmlFor="magic">
               <input
                 className="marginr-xs"
                 type="checkbox"
                 name="itemClassFilter"
-                id="realEstate"
+                id="magic"
               />
-              Real Estate
+              Magic 
             </label>
           </div>
         </div>

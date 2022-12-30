@@ -7,7 +7,7 @@ function HomepageCard(props) {
     <div className="homepage-card">
       <img src={Loading} alt="loading" className="margin-m" />
       <h2 className="margin-xs">{title}</h2>
-      <p className="margin-l">
+      <p className="margin-m">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sint unde
         soluta sed cupiditate.
       </p>

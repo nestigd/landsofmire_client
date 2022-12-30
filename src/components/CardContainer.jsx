@@ -1,11 +1,14 @@
 import HomepageCard from "../components/HomepageCard";
 
 function CardContainer(props) {
+  const items = props.onSale;
+
   return (
     <div className="card-container margin-l">
-      <HomepageCard {...props.item1} />
-      <HomepageCard {...props.item2} />
-      <HomepageCard {...props.item3} />
+      {items &&
+        items.map((item) => {
+          return <HomepageCard key={item.title} {...item} />;
+        })}
     </div>
   );
 }

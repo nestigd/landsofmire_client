@@ -16,10 +16,9 @@ function Home() {
       const responseJson = await response.json();
 
       if (response.ok) {
-        console.log(responseJson);
         setOnSale(responseJson.items);
-      }else{
-        console.log(response.error)
+      } else {
+        console.log(response.error);
       }
     };
 
@@ -46,7 +45,7 @@ function Home() {
           heading="Become stronger while saving!"
         />
         {/*TODO: Make card container a carousel to display more cards if necessary*/}
-        <CardContainer {...onSale} />
+        <CardContainer onSale={onSale} />
         <MainBtn to="/store" btnText="Store" />
       </section>
 

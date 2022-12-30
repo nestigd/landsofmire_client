@@ -1,7 +1,7 @@
 import AboutGrid from "../components/AboutGrid";
 import Hero from "../components/Hero";
 import SectionTitle from "../components/SectionTitle";
-import CardContainer from "../components/CardContainer";
+import HomepageCardContainer from "../components/HomepageCardContainer";
 import MainBtn from "../components/MainBtn";
 import { useEffect, useState } from "react";
 
@@ -45,7 +45,7 @@ function Home() {
           heading="Become stronger while saving!"
         />
         {/*TODO: Make card container a carousel to display more cards if necessary*/}
-        <CardContainer onSale={onSale} />
+        <HomepageCardContainer onSale={onSale} />
         <MainBtn to="/store" btnText="Store" />
       </section>
 

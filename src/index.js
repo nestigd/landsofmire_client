@@ -7,6 +7,7 @@ import "./style/general.css";
 import "./style/home.css";
 import "./style/store.css";
 import "./style/lore.css";
+import "./style/auth.css";
 
 //components
 import App from "./App";

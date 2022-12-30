@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Signup = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -28,11 +28,11 @@ const Signup = () => {
           value={password}
         />
         <button type="submit" className="main-button" onClick={handleSubmit}>
-          Sign up
+          Log in
         </button>
       </form>
     </div>
   );
 };
 
-export default Signup;
+export default Login;

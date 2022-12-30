@@ -1,5 +1,5 @@
 .store {
---sidebar-movement : 22rem;
+  --sidebar-movement: 22rem;
 
   padding: 3.2rem 1.6rem;
   background: var(--very-light-white);
@@ -57,7 +57,7 @@
 }
 
 .store-sidebar--form input {
-    color: var(--main-color-very-light);
+  color: var(--main-color-very-light);
   font-size: 1.8rem;
   text-align: center;
   background-color: transparent;
@@ -92,11 +92,11 @@
   padding: 1.6rem;
 }
 
-.store-padding{
-    padding: 1.6rem 1.6rem;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
+.store-padding {
+  padding: 1.6rem 1.6rem;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
 }
 
 .store-card-container {
@@ -105,20 +105,20 @@
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
-.store-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    flex: 0 0 18rem;
-    border-radius: 16px;
-    padding: 1.6rem 1.6rem;
-    box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-
+.store-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 18rem;
+  border-radius: 16px;
+  padding: 1.6rem 1.6rem;
+  box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.1);
+  background-color: #eeeeee;
+  position: relative;
 }
 
 .store-card img {
@@ -135,9 +135,9 @@
 }
 
 .store-category {
-    color: var(--main-color-very-light);
-    font-weight: 500;
-    letter-spacing: 0.5px;
+  color: var(--main-color-very-light);
+  font-weight: 500;
+  letter-spacing: 0.5px;
   font-size: 1rem;
   padding: 0.4rem 0.8rem;
   background-color: var(--main-color-dark);
@@ -145,7 +145,7 @@
 }
 
 .store-title span {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
   display: inline-block;
 }
 
@@ -178,55 +178,50 @@
   justify-self: flex-end;
 }
 
-
 /***** hide sidebar *****/
 
 /** button **/
 
-
-.toggle-sidebar{
-    border: none;
-    background-color: transparent;
-    position: absolute;
-    top:1.6rem;
-    left: 1.6rem;
-    display: flex;
-    align-items: center;
-    justify-self: center;
+.toggle-sidebar {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 1.6rem;
+  left: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-self: center;
 }
 
-.toggle-sidebar svg{
-    fill: var(--main-color);
-    width: 3.2rem;
-    height: 3.2rem;
-    transition: all 0.2s;
+.toggle-sidebar svg {
+  fill: var(--main-color);
+  width: 3.2rem;
+  height: 3.2rem;
+  transition: all 0.2s;
 }
 
-
-
-.store-sidebar{
-    margin-left: -22rem;
-    opacity: 0;
+.store-sidebar {
+  margin-left: -22rem;
+  opacity: 0;
 }
 
-.store-main{
-    margin-left: -3.6rem;
+.store-main {
+  margin-left: -3.6rem;
 }
 
-.sidebaron .store-sidebar{
-    margin-left: 0;
-    opacity: 100;
+.sidebaron .store-sidebar {
+  margin-left: 0;
+  opacity: 100;
 }
 
-.sidebaron .store-main{
-    margin-left: 0;
+.sidebaron .store-main {
+  margin-left: 0;
 }
 
-
-.sidebaron .toggle-sidebar svg{
-    fill: var(--main-color-very-light);
+.sidebaron .toggle-sidebar svg {
+  fill: var(--main-color-very-light);
 }
 
-.toggle-sidebar:hover svg{
-    fill: var(--main-color-dark);
+.toggle-sidebar:hover svg {
+  fill: var(--main-color-dark);
 }

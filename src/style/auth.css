@@ -4,8 +4,10 @@ body {
 
 .auth-container {
   position: absolute;
+  flex-direction: column;
   top: 50vh;
   left: 50%;
+  width: 30%;
   transform: translate(-50%, -50%);
   font-size: 1.6rem;
   display: flex;
@@ -18,7 +20,7 @@ body {
   flex-direction: column;
   gap: 1.6rem;
   padding: 3.2rem;
-  min-width: 30rem;
+  width: 100%;
   border-radius: 16px;
   background-color: var(--main-color-light);
   box-shadow: 3px 3px 30px 3px rgba(0, 0, 0, 0.1);
@@ -39,7 +41,7 @@ body {
 }
 
 .auth input:hover {
-  border-color: var(--very-light-white);
+  border-color: rgb(226, 166, 166);
 }
 
 .auth input:focus {
@@ -50,9 +52,28 @@ body {
 .auth button {
   box-shadow: 3px 3px 30px 3px rgba(0, 0, 0, 0.1);
   align-self: center;
+  border: solid 3px var(--main-color);
 }
 
 .auth button:hover {
-  transform: translatey(-3px);
+  transform: translateY(0);
+
+  border: solid 2px var(--main-color-light);
   box-shadow: 3px 3px 40px 5px rgba(0, 0, 0, 0.2);
+  border: solid 3px rgb(102, 47, 47);
+}
+
+.auth button:focus {
+  outline-color: var(--main-color-dark);
+}
+
+.auth .error {
+  color: rgb(128, 25, 25);
+  font-weight: 500;
+  font-size: 1.6rem;
+  display: inline-block;
+  padding: 0.8rem;
+  border-radius: 8px;
+  background-color: rgb(236, 192, 192);
+  border: solid 2px rgb(230, 108, 108);
 }

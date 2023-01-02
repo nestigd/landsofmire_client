@@ -119,6 +119,11 @@
   box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.1);
   background-color: #eeeeee;
   position: relative;
+  transition: all 0.6s;
+}
+
+.store-card:hover {
+  transform: translateY(-3px);
 }
 
 .store-card img {

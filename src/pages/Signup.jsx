@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSignup } from "../hooks/useSignup";
+import AuthForm from "../components/AuthForm";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -12,37 +13,20 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     await signup(email, password);
   };
 
   return (
     <div className="auth-container">
-      <form className="auth login">
-        <input
-          placeholder="email"
-          type="email"
-          name="email"
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-        />
-        <input
-          placeholder="password"
-          type="password"
-          name="password"
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}
-        />
-        <button
-          type="submit"
-          className="main-button"
-          onClick={handleSubmit}
-          disabled={isLoading}
-        >
-          Sign up
-        </button>
-        {error && <p className="error"> {error} </p>}
-      </form>
+      <AuthForm 
+        props={
+          {
+          heading:"Sign up",
+          email, setEmail, 
+          password, setPassword, 
+          error, isLoading, handleSubmit}
+        }
+      />
     </div>
   );
 };

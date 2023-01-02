@@ -15,6 +15,16 @@ body {
   align-items: center;
 }
 
+.auth h2{
+  font-size: 4.8rem;
+  color: var(--main-color);
+  text-align: center;
+  display: inline-block;
+  padding: 0.6rem;
+  margin: 0 auto;
+  border-bottom: solid 4px var(--main-color);
+}
+
 .auth {
   display: flex;
   flex-direction: column;

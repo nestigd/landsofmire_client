@@ -18,14 +18,17 @@ const Signup = () => {
 
   return (
     <div className="auth-container">
-      <AuthForm 
-        props={
-          {
-          heading:"Sign up",
-          email, setEmail, 
-          password, setPassword, 
-          error, isLoading, handleSubmit}
-        }
+      <AuthForm
+        props={{
+          heading: "Sign up",
+          email,
+          setEmail,
+          password,
+          setPassword,
+          error,
+          isLoading,
+          handleSubmit,
+        }}
       />
     </div>
   );

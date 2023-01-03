@@ -1,4 +1,4 @@
-import GameComponent from "../components/GameComponent";
+import GameComponent from "../game/GameInstance";
 
 function Game() {
   return (

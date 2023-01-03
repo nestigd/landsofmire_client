@@ -8,6 +8,7 @@ import "./style/home.css";
 import "./style/store.css";
 import "./style/lore.css";
 import "./style/auth.css";
+import "./style/auth.css";
 
 //components
 import App from "./App";
@@ -17,9 +18,7 @@ import { AuthContextProvider } from "./context/AuthContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <AuthContextProvider>
-      <App />
-    </AuthContextProvider>
-  </React.StrictMode>
+  <AuthContextProvider>
+    <App />
+  </AuthContextProvider>
 );

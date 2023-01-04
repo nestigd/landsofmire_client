@@ -63,7 +63,7 @@ export default class Scene1 extends Scene {
 
     this.load.spritesheet(
       "beam",
-      process.env.PUBLIC_URL + "assets/spritesheets/power-up.png",
+      process.env.PUBLIC_URL + "assets/spritesheets/Beam.png",
       {
         frameWidth: 16,
         frameHeight: 16,
@@ -79,9 +79,9 @@ export default class Scene1 extends Scene {
 
     // MAKE ANIMATIONS
     // helper function creates animations called NAME_ANIM
-    const animate = (name, framerate, repeat) => {
+    const makeAnim = (name, framerate, repeat) => {
       this.anims.create({
-        key: name + "_anim",
+        key: name + "Anim",
         frames: this.anims.generateFrameNumbers(name),
         frameRate: framerate ? framerate : 20,
         // infinite loop
@@ -89,11 +89,11 @@ export default class Scene1 extends Scene {
       });
     };
     // create ship animations w/ the helper function
-    animate("player", 20, -1);
-    animate("beam");
-    animate("ship1", 20, -1);
-    animate("ship2", 20, -1);
-    animate("ship3", 20, -1);
+    makeAnim("player", 20, -1);
+    makeAnim("beam", 20, -1);
+    makeAnim("ship1", 20, -1);
+    makeAnim("ship2", 20, -1);
+    makeAnim("ship3", 20, -1);
 
     // the explosion animation doesn't loop and the sprite get hidden
     this.anims.create({

@@ -1,5 +1,9 @@
 import { Scene, Input, Math as PhaserMath } from "phaser";
 import { config, gameSettings } from "../../components/GameComponent";
+import Beam from "./beam";
+
+
+
 
 /** MAIN GAME SCENE **/
 export default class Scene2 extends Scene {
@@ -24,12 +28,14 @@ export default class Scene2 extends Scene {
       (config.height / 10) * 8.5,
       "player"
     );
-    // player animation
-    this.player.play("player_anim");
+    this.player.play("playerAnim");
     this.cursorKeys = this.input.keyboard.createCursorKeys();
     this.player.setCollideWorldBounds(true);
 
     this.spacebar = this.input.keyboard.addKey(Input.Keyboard.KeyCodes.SPACE);
+
+    // add beams
+    this.projectiles = this.add.group()
 
     // add ENEMY objects
     this.ship1 = this.add.sprite(
@@ -48,9 +54,9 @@ export default class Scene2 extends Scene {
       "ship3"
     );
     // enemy animation
-    this.ship1.play("ship1_anim");
-    this.ship2.play("ship2_anim");
-    this.ship3.play("ship3_anim");
+    this.ship1.play("ship1Anim");
+    this.ship2.play("ship2Anim");
+    this.ship3.play("ship3Anim");
 
     // make enemy interactive
     this.ship1.setInteractive();
@@ -62,7 +68,6 @@ export default class Scene2 extends Scene {
 
     // add POWER-UPS
     this.powerUps = this.physics.add.group();
-
     const maxObjects = 4;
     for (let i = 0; i < maxObjects; i++) {
       var powerUp = this.physics.add.sprite(16, 16, "power-up");
@@ -84,22 +89,36 @@ export default class Scene2 extends Scene {
       powerUp.setCollideWorldBounds(true);
       powerUp.setBounce(1);
     }
+
+    this.physics.add.collider(this.projectiles, this.powerUps, (projectile, powerUp)=>{
+      projectile.destroy();
+      powerUp.play('explode')
+    })
   }
 
   update() {
-    // background movement
+    // move background
     this.background.tilePositionY -= 0.5;
     this.background.tilePositionX += 0.1;
 
+    // move player
     this.movePlayerManager();
     if (Input.Keyboard.JustDown(this.spacebar)) {
-      console.log("fire");
+      this.shootBeam();
     }
 
-    // enemy movement
+    // move enemy
     this.moveShip(this.ship1, 1);
     this.moveShip(this.ship2, 1.5);
     this.moveShip(this.ship3, 2);
+
+    // update all beams (destroy when outside frame)
+    let children = this.projectiles.getChildren()
+    for (let i = 0; i < children.length ; i++ ){
+      console.log("inside the loop " + i)
+      var beam = children[i];
+      beam.update();
+    }
   }
 
   // helper functions
@@ -136,5 +155,10 @@ export default class Scene2 extends Scene {
     } else {
       this.player.setVelocityY(0);
     }
+  }
+
+  shootBeam(){
+    console.log("fire")
+    var beam = new Beam(this);
   }
 }

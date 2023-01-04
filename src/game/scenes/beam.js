@@ -27,7 +27,6 @@ export default class Beam extends GameObjects.Sprite{
       this.body.velocity.y = -250;
     }
     if (this.y < 5){
-      console.log("destroy")
       this.destroy();
     }
   }

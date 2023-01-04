@@ -115,7 +115,6 @@ export default class Scene2 extends Scene {
     // update all beams (destroy when outside frame)
     let children = this.projectiles.getChildren()
     for (let i = 0; i < children.length ; i++ ){
-      console.log("inside the loop " + i)
       var beam = children[i];
       beam.update();
     }
@@ -158,7 +157,6 @@ export default class Scene2 extends Scene {
   }
 
   shootBeam(){
-    console.log("fire")
     var beam = new Beam(this);
   }
 }

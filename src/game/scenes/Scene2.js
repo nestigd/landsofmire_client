@@ -34,7 +34,7 @@ export default class Scene2 extends Scene {
 
     this.spacebar = this.input.keyboard.addKey(Input.Keyboard.KeyCodes.SPACE);
 
-    // add beams
+    // add group for BEAMS
     this.projectiles = this.add.group()
 
     // add ENEMY objects
@@ -53,6 +53,12 @@ export default class Scene2 extends Scene {
       -900,
       "ship3"
     );
+
+    this.enemies = this.physics.add.group();
+    this.enemies.add(this.ship1);
+    this.enemies.add(this.ship2);
+    this.enemies.add(this.ship3);
+
     // enemy animation
     this.ship1.play("ship1Anim");
     this.ship2.play("ship2Anim");
@@ -90,10 +96,29 @@ export default class Scene2 extends Scene {
       powerUp.setBounce(1);
     }
 
+    // COLLISIONS:
+
+    // bounce bram & power-up
     this.physics.add.collider(this.projectiles, this.powerUps, (projectile, powerUp)=>{
       projectile.destroy();
-      powerUp.play('explode')
     })
+
+    // player gets power-up
+    this.physics.add.overlap(this.player, this.powerUps, this.pickPowerUp, null, this);
+
+    // enemy hurts player
+    this.physics.add.overlap(this.player, this.enemies, this.hurtPlayer, null, this)
+  }
+
+  pickPowerUp(player, powerUp){
+    powerUp.disableBody(true, true);
+    
+  }
+
+  hurtPlayer(player, enemy){
+    this.resetShipPos(enemy);
+    player.x = config.width / 2
+    player.y = (config.height / 10) * 8.5;
   }
 
   update() {
@@ -159,4 +184,5 @@ export default class Scene2 extends Scene {
   shootBeam(){
     var beam = new Beam(this);
   }
+
 }

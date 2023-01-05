@@ -107,7 +107,10 @@ export default class Scene2 extends Scene {
     this.physics.add.overlap(this.player, this.powerUps, this.pickPowerUp, null, this);
 
     // enemy hurts player
-    this.physics.add.overlap(this.player, this.enemies, this.hurtPlayer, null, this)
+    this.physics.add.overlap(this.player, this.enemies, this.hurtPlayer, null, this);
+
+    // beam kills enemy
+    this.physics.add.overlap(this.projectiles, this.enemies, this.hitEnemy, null, this);
   }
 
   pickPowerUp(player, powerUp){
@@ -120,6 +123,14 @@ export default class Scene2 extends Scene {
     player.x = config.width / 2
     player.y = (config.height / 10) * 8.5;
   }
+
+  hitEnemy(projectile, enemy){
+    projectile.destroy();
+    enemy.
+    this.resetShipPos(enemy)
+  }
+
+
 
   update() {
     // move background

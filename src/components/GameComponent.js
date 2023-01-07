@@ -6,6 +6,14 @@ import Scene2 from "../game/scenes/Scene2";
 
 export const gameSettings = {
   playerSpeed: 250,
+  score : {
+    initialScore: 5,
+    shotCost: 1,
+    killEnemy : 10,
+    takeDamage : 100,
+    enemyPassed : 50,   
+    shotCost: 1,
+  },
 };
 
 export const config = {

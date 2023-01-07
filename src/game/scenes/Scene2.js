@@ -8,8 +8,9 @@ export default class Scene2 extends Scene {
     super("playGame");
   }
 
+  //  ***** CREATE *****
   create() {
-    // BACKGROUND
+    // CREATE - BACKGROUND
     this.background = this.add.tileSprite(
       0,
       0,
@@ -19,7 +20,7 @@ export default class Scene2 extends Scene {
     );
     this.background.setOrigin(0, 0);
 
-    // add PLAYER
+    // CREATE - PLAYER
     this.player = this.physics.add.sprite(
       config.width / 2,
       (config.height / 10) * 8.5,
@@ -31,10 +32,10 @@ export default class Scene2 extends Scene {
 
     this.spacebar = this.input.keyboard.addKey(Input.Keyboard.KeyCodes.SPACE);
 
-    // add group for BEAMS
+    // CREATE - group for BEAMS
     this.projectiles = this.add.group();
 
-    // add ENEMY objects
+    // CREATE - ENEMY objects
     this.ship1 = this.add.sprite(
       PhaserMath.Between(0, config.width) - 15,
       -20,
@@ -69,7 +70,7 @@ export default class Scene2 extends Scene {
     // destroy ship on interaction
     this.input.on("gameobjectdown", this.destroyShip, this);
 
-    // add POWER-UPS
+    // CREATE - POWER-UPS
     this.powerUps = this.physics.add.group();
     const maxObjects = 4;
     for (let i = 0; i < maxObjects; i++) {
@@ -93,7 +94,7 @@ export default class Scene2 extends Scene {
       powerUp.setBounce(1);
     }
 
-    // COLLISIONS:
+    // CREATE - COLLISIONS:
 
     // bounce bram & power-up
     this.physics.add.collider(
@@ -130,8 +131,22 @@ export default class Scene2 extends Scene {
       null,
       this
     );
+
+			
+
+    this.score = gameSettings.score.initialScore;
+
+    this.scoreLabel = this.add.bitmapText(
+      // POSITION, 
+      10,5, 
+      // FONT
+      "pixelFont",
+      // TEXT & FONT SIZE
+      "SCORE "+ this.score, 24
+    )
   }
 
+  // HELPER FUNCTIONS - for CREATE
   pickPowerUp(player, powerUp) {
     powerUp.disableBody(true, true);
   }
@@ -140,13 +155,16 @@ export default class Scene2 extends Scene {
     this.resetShipPos(enemy);
     player.x = config.width / 2;
     player.y = (config.height / 10) * 8.5;
+    this.updateScore(-gameSettings.score.takeDamage)
   }
 
   hitEnemy(projectile, enemy) {
     projectile.destroy();
     this.resetShipPos(enemy);
+    this.updateScore(gameSettings.score.killEnemy)
   }
 
+  //  ***** UPDATE *****
   update() {
     // move background
     this.background.tilePositionY -= 0.5;
@@ -163,18 +181,20 @@ export default class Scene2 extends Scene {
     this.moveShip(this.ship2, 1.5);
     this.moveShip(this.ship3, 2);
 
-    // update all beams (destroy when outside frame)
+    // destroy any beam outside canvas
     let children = this.projectiles.getChildren();
     for (let i = 0; i < children.length; i++) {
       var beam = children[i];
       beam.update();
     }
+
   }
 
   // helper functions
   moveShip(ship, speed) {
     ship.y += speed;
     if (ship.y > config.height + 15) {
+      this.updateScore(-gameSettings.score.enemyPassed)
       this.resetShipPos(ship);
     }
   }
@@ -208,6 +228,13 @@ export default class Scene2 extends Scene {
   }
 
   shootBeam() {
+    this.updateScore(-gameSettings.score.shotCost)
     new Beam(this);
   }
+
+  updateScore(value){
+    this.score += value;
+    this.scoreLabel.text = "SCORE " + this.score;
+  }
+
 }

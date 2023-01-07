@@ -1,5 +1,7 @@
 import { Scene } from "phaser";
 
+const publicUrl = process.env.PUBLIC_URL
+
 /** LOADING SCREEN **/
 export default class Scene1 extends Scene {
   constructor() {
@@ -8,13 +10,15 @@ export default class Scene1 extends Scene {
 
   // load assets
   preload() {
+    // IMAGES
     this.load.image(
       "background",
-      process.env.PUBLIC_URL + "assets/images/background.jpg"
+      publicUrl + "assets/images/background.jpg"
     );
+    // SPRITES
     this.load.spritesheet(
       "player",
-      process.env.PUBLIC_URL + "assets/spritesheets/player.png",
+      publicUrl + "assets/spritesheets/player.png",
       {
         frameWidth: 16,
         frameHeight: 24,
@@ -22,7 +26,7 @@ export default class Scene1 extends Scene {
     );
     this.load.spritesheet(
       "ship1",
-      process.env.PUBLIC_URL + "assets/spritesheets/ship.png",
+      publicUrl + "assets/spritesheets/ship.png",
       {
         frameWidth: 16,
         frameHeight: 16,
@@ -30,7 +34,7 @@ export default class Scene1 extends Scene {
     );
     this.load.spritesheet(
       "ship2",
-      process.env.PUBLIC_URL + "assets/spritesheets/ship2.png",
+      publicUrl + "assets/spritesheets/ship2.png",
       {
         frameWidth: 32,
         frameHeight: 16,
@@ -38,7 +42,7 @@ export default class Scene1 extends Scene {
     );
     this.load.spritesheet(
       "ship3",
-      process.env.PUBLIC_URL + "assets/spritesheets/ship3.png",
+      publicUrl + "assets/spritesheets/ship3.png",
       {
         frameWidth: 32,
         frameHeight: 32,
@@ -46,7 +50,7 @@ export default class Scene1 extends Scene {
     );
     this.load.spritesheet(
       "explosion",
-      process.env.PUBLIC_URL + "assets/spritesheets/explosion.png",
+      publicUrl + "assets/spritesheets/explosion.png",
       {
         frameWidth: 16,
         frameHeight: 16,
@@ -54,20 +58,26 @@ export default class Scene1 extends Scene {
     );
     this.load.spritesheet(
       "power-up",
-      process.env.PUBLIC_URL + "assets/spritesheets/power-up.png",
+      publicUrl + "assets/spritesheets/power-up.png",
+      {
+        frameWidth: 16,
+        frameHeight: 16,
+      }
+    );
+    this.load.spritesheet(
+      "beam",
+      publicUrl + "assets/spritesheets/Beam.png",
       {
         frameWidth: 16,
         frameHeight: 16,
       }
     );
 
-    this.load.spritesheet(
-      "beam",
-      process.env.PUBLIC_URL + "assets/spritesheets/Beam.png",
-      {
-        frameWidth: 16,
-        frameHeight: 16,
-      }
+    // FONTS
+    this.load.bitmapFont(
+      "pixelFont",
+      publicUrl + "assets/font/font.png",
+      publicUrl + "assets/font/font.xml"
     );
   }
 

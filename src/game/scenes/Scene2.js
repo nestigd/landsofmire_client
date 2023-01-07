@@ -2,9 +2,6 @@ import { Scene, Input, Math as PhaserMath } from "phaser";
 import { config, gameSettings } from "../../components/GameComponent";
 import Beam from "./beam";
 
-
-
-
 /** MAIN GAME SCENE **/
 export default class Scene2 extends Scene {
   constructor() {
@@ -35,7 +32,7 @@ export default class Scene2 extends Scene {
     this.spacebar = this.input.keyboard.addKey(Input.Keyboard.KeyCodes.SPACE);
 
     // add group for BEAMS
-    this.projectiles = this.add.group()
+    this.projectiles = this.add.group();
 
     // add ENEMY objects
     this.ship1 = this.add.sprite(
@@ -99,38 +96,56 @@ export default class Scene2 extends Scene {
     // COLLISIONS:
 
     // bounce bram & power-up
-    this.physics.add.collider(this.projectiles, this.powerUps, (projectile, powerUp)=>{
-      projectile.destroy();
-    })
+    this.physics.add.collider(
+      this.projectiles,
+      this.powerUps,
+      (projectile, powerUp) => {
+        projectile.destroy();
+      }
+    );
 
     // player gets power-up
-    this.physics.add.overlap(this.player, this.powerUps, this.pickPowerUp, null, this);
+    this.physics.add.overlap(
+      this.player,
+      this.powerUps,
+      this.pickPowerUp,
+      null,
+      this
+    );
 
     // enemy hurts player
-    this.physics.add.overlap(this.player, this.enemies, this.hurtPlayer, null, this);
+    this.physics.add.overlap(
+      this.player,
+      this.enemies,
+      this.hurtPlayer,
+      null,
+      this
+    );
 
     // beam kills enemy
-    this.physics.add.overlap(this.projectiles, this.enemies, this.hitEnemy, null, this);
+    this.physics.add.overlap(
+      this.projectiles,
+      this.enemies,
+      this.hitEnemy,
+      null,
+      this
+    );
   }
 
-  pickPowerUp(player, powerUp){
+  pickPowerUp(player, powerUp) {
     powerUp.disableBody(true, true);
-    
   }
 
-  hurtPlayer(player, enemy){
+  hurtPlayer(player, enemy) {
     this.resetShipPos(enemy);
-    player.x = config.width / 2
+    player.x = config.width / 2;
     player.y = (config.height / 10) * 8.5;
   }
 
-  hitEnemy(projectile, enemy){
+  hitEnemy(projectile, enemy) {
     projectile.destroy();
-    enemy.
-    this.resetShipPos(enemy)
+    this.resetShipPos(enemy);
   }
-
-
 
   update() {
     // move background
@@ -149,8 +164,8 @@ export default class Scene2 extends Scene {
     this.moveShip(this.ship3, 2);
 
     // update all beams (destroy when outside frame)
-    let children = this.projectiles.getChildren()
-    for (let i = 0; i < children.length ; i++ ){
+    let children = this.projectiles.getChildren();
+    for (let i = 0; i < children.length; i++) {
       var beam = children[i];
       beam.update();
     }
@@ -192,8 +207,7 @@ export default class Scene2 extends Scene {
     }
   }
 
-  shootBeam(){
-    var beam = new Beam(this);
+  shootBeam() {
+    new Beam(this);
   }
-
 }

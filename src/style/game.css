@@ -1,0 +1,10 @@
+.game{
+  background-color:   var(--main-color-very-light);
+}
+.menu-hide{
+  display: none;
+}
+.game-main{
+  display: flex;
+  justify-content: space-around;
+}

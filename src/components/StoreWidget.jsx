@@ -19,9 +19,7 @@ function StoreWidget() {
 
   return (
     <div
-      className={
-        "store-widget container-l" + (sidebarState ? " sidebaron" : " ")
-      }
+      className={"store-widget container-l" + (sidebarState ? " sidebaron" : " ")}
     >
       <StoreSidebar />
       <button className="toggle-sidebar" onClick={toggleSidebar}>

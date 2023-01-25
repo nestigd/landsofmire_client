@@ -5,6 +5,7 @@ import ReactDOM from "react-dom/client";
 //CSS
 import "./style/general.css";
 import "./style/home.css";
+import "./style/game.css"
 import "./style/store.css";
 import "./style/lore.css";
 import "./style/auth.css";
